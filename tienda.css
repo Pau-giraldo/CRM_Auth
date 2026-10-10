@@ -1,0 +1,51 @@
+:root{--bg:#faf8f5;--ink:#1c1b1a;--muted:#6f6b66;--line:#e8e3dc;--accent:#b8893a;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#161514;--ink:#f3efe9;--muted:#a39d94;--line:#2c2a27;--card:#1f1d1b}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit}
+header{padding:44px 20px 24px;text-align:center}
+header h1{margin:0 0 6px;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em}
+header h1 a{text-decoration:none}
+header p{margin:0;color:var(--muted)}
+.bar{max-width:1100px;margin:0 auto;padding:0 20px 20px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+.tabs,.right{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tabs a,.cartlink{padding:8px 16px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.92rem;background:var(--card)}
+.tabs a.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.cartlink{font-weight:600}
+select,input,textarea{font:inherit;color:var(--ink)}
+select{padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.msg{max-width:1100px;margin:0 auto 16px;padding:12px 16px;border-radius:12px;background:#dcfce7;color:#15803d;width:calc(100% - 40px)}
+.grid{max-width:1100px;margin:0 auto;padding:0 20px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{height:170px;display:grid;place-items:center;font-size:64px;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cat{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.name{font-weight:600;font-size:1.05rem}
+.price{font-size:1.25rem;font-weight:700;color:var(--accent);margin-top:auto;padding-top:8px}
+.tag{display:inline-block;font-size:.75rem;padding:2px 10px;border-radius:999px;width:fit-content}
+.ok{background:#dcfce7;color:#15803d}.low{background:#ffedd5;color:#c2410c}.out{background:#fee2e2;color:#b91c1c}
+.btn{display:block;width:100%;text-align:center;margin-top:10px;padding:10px 16px;border:0;border-radius:10px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600;font-size:.92rem;cursor:pointer}
+.btn[disabled]{opacity:.35;cursor:not-allowed}
+.btn.sec{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.inline{display:inline-block;width:auto}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:0 20px 40px}
+/* carrito */
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 60px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:20px}
+.panel h2{margin:0 0 14px;font-size:1.15rem}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:.75rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;padding:6px 8px}
+td{padding:10px 8px;border-top:1px solid var(--line);vertical-align:middle}
+td.num,th.num{text-align:right}
+.qty{width:70px;padding:7px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.total{display:flex;justify-content:space-between;font-size:1.2rem;font-weight:700;padding-top:14px}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.field label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}
+.field input,.field textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.field textarea{min-height:80px;resize:vertical}
+.errors{background:#fee2e2;color:#b91c1c;padding:12px 16px;border-radius:12px;margin-bottom:16px}
+.note{color:var(--muted);font-size:.88rem}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.center{text-align:center}
